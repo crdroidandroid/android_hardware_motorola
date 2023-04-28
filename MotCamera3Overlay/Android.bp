@@ -1,0 +1,10 @@
+//
+// Copyright (C) 2023-2024 crDroid Android Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+runtime_resource_overlay {
+    name: "MotCamera3Overlay",
+    product_specific: true,
+}
