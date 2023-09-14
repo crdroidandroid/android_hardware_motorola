@@ -81,7 +81,7 @@
             </intent-filter>
             <meta-data
                 android:name="com.android.settings.category"
-                android:value="com.android.settings.category.ia.gestures" />
+                android:value="com.android.settings.category.ia.homepage" />
             <meta-data
                 android:name="com.android.settings.summary"
                 android:resource="@string/device_gestures_summary" />
