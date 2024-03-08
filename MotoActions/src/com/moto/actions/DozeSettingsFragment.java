@@ -21,7 +21,7 @@ import android.os.Bundle;
 import androidx.preference.PreferenceFragment;
 import android.provider.Settings;
 import androidx.preference.Preference;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import android.view.MenuItem;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,8 +32,8 @@ import android.widget.TextView;
 
 public class DozeSettingsFragment extends PreferenceFragment {
 
-    private SwitchPreference mHandwavePreference;
-    private SwitchPreference mPickupPreference;
+    private SwitchPreferenceCompat mHandwavePreference;
+    private SwitchPreferenceCompat mPickupPreference;
 
     private TextView mSwitchBarText;
     private Switch mAmbientDisplaySwitch;
@@ -82,8 +82,8 @@ public class DozeSettingsFragment extends PreferenceFragment {
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.doze_panel);
         boolean dozeEnabled = MotoActionsSettings.isDozeEnabled(getActivity().getContentResolver());
-        mHandwavePreference = (SwitchPreference) findPreference(KEY_GESTURE_HAND_WAVE);
-        mPickupPreference = (SwitchPreference) findPreference(KEY_GESTURE_PICK_UP);
+        mHandwavePreference = (SwitchPreferenceCompat) findPreference(KEY_GESTURE_HAND_WAVE);
+        mPickupPreference = (SwitchPreferenceCompat) findPreference(KEY_GESTURE_PICK_UP);
         updatePrefs(dozeEnabled);
     }
 

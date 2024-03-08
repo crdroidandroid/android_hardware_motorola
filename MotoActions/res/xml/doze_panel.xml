@@ -18,13 +18,13 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
         android:title="@string/ambient_display_title">
 
-    <SwitchPreference
+    <SwitchPreferenceCompat
         android:key="gesture_pick_up"
         android:defaultValue="true"
         android:title="@string/pick_up_gesture_title"
         android:summary="@string/pick_up_gesture_summary" />
 
-    <SwitchPreference
+    <SwitchPreferenceCompat
         android:key="gesture_hand_wave"
         android:defaultValue="true"
         android:title="@string/hand_wave_gesture_title"
