@@ -1,0 +1,28 @@
+Motorola Dolby Atmos
+====================
+
+Getting Started
+---------------
+Clone the repository:
+
+Patches required to the device tree side :
+
+```bash
+https://github.com/sdm660-motorola/android_device_motorola_beckham/commit/0ddf5f7426aa62858381d97a472867da31b0c74a
+```
+
+```bash
+https://github.com/sdm660-motorola/device_motorola_msm8998-common/commit/8f107da3add9fa8f585e1a553543f858801cf8ee
+```
+
+To support the Dolby media codecs, include this line on your device tree :
+
+```bash
+<Include href="media_codecs_dolby_audio.xml" />
+```
+
+Inherit the dolby configs by :
+
+```bash
+$(call inherit-product, hardware/motorola/dolby/setup.mk)
+```
