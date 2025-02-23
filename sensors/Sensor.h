@@ -115,17 +115,18 @@ class SysfsPollingOneShotSensor : public OneShotSensor {
 
 const std::string kTsPath = "/sys/class/touchscreen/primary/";
 
+constexpr int32_t SENSOR_TYPE_BASE = static_cast<int32_t>(SensorType::DEVICE_PRIVATE_BASE) + 100;
+
 const std::string kTsDoubleTapPressedPath = kTsPath + "double_tap_pressed";
 const std::string kTsDoubleTapEnabledPath = kTsPath + "double_tap_enabled";
 
 class DoubleTapSensor : public SysfsPollingOneShotSensor {
   public:
     DoubleTapSensor(int32_t sensorHandle, ISensorsEventCallback* callback)
-        : SysfsPollingOneShotSensor(
-                  sensorHandle, callback, kTsDoubleTapPressedPath, kTsDoubleTapEnabledPath,
-                  "Double Tap Sensor", "org.lineageos.sensor.double_tap",
-                  static_cast<SensorType>(static_cast<int32_t>(SensorType::DEVICE_PRIVATE_BASE) +
-                                          1)) {}
+        : SysfsPollingOneShotSensor(sensorHandle, callback, kTsDoubleTapPressedPath,
+                                    kTsDoubleTapEnabledPath, "Double Tap Sensor",
+                                    "org.lineageos.sensor.double_tap",
+                                    static_cast<SensorType>(SENSOR_TYPE_BASE + 1)) {}
 };
 
 const std::string kTsUdfpsPressedPath = kTsPath + "udfps_pressed";
@@ -136,9 +137,7 @@ class UdfpsSensor : public SysfsPollingOneShotSensor {
     UdfpsSensor(int32_t sensorHandle, ISensorsEventCallback* callback)
         : SysfsPollingOneShotSensor(
                   sensorHandle, callback, kTsUdfpsPressedPath, kTsUdfpsEnabledPath, "UDFPS Sensor",
-                  "org.lineageos.sensor.udfps",
-                  static_cast<SensorType>(static_cast<int32_t>(SensorType::DEVICE_PRIVATE_BASE) +
-                                          2)) {}
+                  "org.lineageos.sensor.udfps", static_cast<SensorType>(SENSOR_TYPE_BASE + 2)) {}
 };
 
 }  // namespace implementation
