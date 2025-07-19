@@ -6,11 +6,11 @@ genfscon sysfs /devices/platform/soc/soc:mmi,discrete-charging/extcon    u:objec
 genfscon sysfs /devices/platform/soc/soc:rt-pd-manager/extcon            u:object_r:sysfs_extcon:s0
 
 # Fingerprint
-genfscon sysfs /devices/platform/egis_input            u:object_r:vendor_sysfs_fingerprint:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/fod_hbm   u:object_r:vendor_sysfs_fingerprint:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/fod_ui   u:object_r:vendor_sysfs_fingerprint:s0
-genfscon sysfs /devices/soc/0.et320                    u:object_r:vendor_sysfs_fingerprint:s0
-genfscon sysfs /devices/virtual/fingerprint/fpc1020    u:object_r:vendor_sysfs_fingerprint:s0
+genfscon sysfs /devices/platform/egis_input                                  u:object_r:vendor_sysfs_fingerprint:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/fod_hbm    u:object_r:vendor_sysfs_fingerprint:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/fod_ui     u:object_r:vendor_sysfs_fingerprint:s0
+genfscon sysfs /devices/soc/0.et320                                          u:object_r:vendor_sysfs_fingerprint:s0
+genfscon sysfs /devices/virtual/fingerprint/fpc1020                          u:object_r:vendor_sysfs_fingerprint:s0
 
 # Health
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5-mmi/power_supply/battery        u:object_r:vendor_sysfs_battery_supply:s0
