@@ -9,3 +9,11 @@ phony {
         "FrameworksResMotoCommon",
     ]
 }
+
+phony {
+    name: "MotoEuicc",
+    required: [
+        "EuiccPolicy",
+        "EuiccPolicyMoto",
+    ]
+}
